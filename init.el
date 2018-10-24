@@ -369,7 +369,10 @@ codepoints starting from codepoint-start."
           (append my-fira-code-ligatures prettify-symbols-alist))
     (prettify-symbols-mode))
 
-  (add-hook 'prog-mode-hook 'my-set-fira-code-ligatures)
+  ;;; Ligatures are buggy in SML mode - disable them for this mode
+  (add-hook 'prog-mode-hook (lambda ()
+                              (unless (eq major-mode 'sml-mode)
+                                (my-set-fira-code-ligatures))))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
