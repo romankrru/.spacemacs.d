@@ -142,7 +142,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '(("Fira Code"
-                               :size 14
+                               :size 15
                                :weight normal
                                :width normal
                                :powerline-scale 1.2)
@@ -325,7 +325,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
   (use-package all-the-icons)
-
+  (setq neo-banner-message nil) ; Disable neotree banner message
   (diff-hl-flydiff-mode '(:global t))
   (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
 
@@ -383,6 +383,7 @@ codepoints starting from codepoint-start."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(diff-hl-draw-borders nil)
+ '(neo-banner-message nil)
  '(neo-theme (quote icons))
  '(package-selected-packages
    (quote
