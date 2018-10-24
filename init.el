@@ -382,6 +382,7 @@ codepoints starting from codepoint-start."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(diff-hl-draw-borders nil)
  '(neo-theme (quote icons))
  '(package-selected-packages
    (quote
@@ -391,4 +392,6 @@ codepoints starting from codepoint-start."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(diff-hl-change ((t (:background "#0c7d9d"))))
+ '(diff-hl-delete ((t (:background "#94151b"))))
+ '(diff-hl-insert ((t (:background "#587c0c")))))
