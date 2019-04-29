@@ -392,9 +392,8 @@ codepoints starting from codepoint-start."
           (append my-fira-code-ligatures prettify-symbols-alist))
     (prettify-symbols-mode))
 
-  ;;; Ligatures are buggy in SML mode - disable them for this mode
   (add-hook 'prog-mode-hook (lambda ()
-                              (unless (eq major-mode 'sml-mode)
+                              (when (eq major-mode 'clojure-mode)
                                 (my-set-fira-code-ligatures))))
   )
 
